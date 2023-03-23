@@ -1,0 +1,31 @@
+{
+  "name": "mschamps-23-web-app-test",
+  "version": "1.0.0",
+  "description": "This web app is for testing purposes only.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLSA-Sri-Lanka/mschamps-23-web-app-test.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Dileepa Bandara",
+    "email": "contact@dileepabandara.dev",
+    "url": "https://dileepabandara.dev",
+    "github": "https://github.com/dileepabandara"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MLSA-Sri-Lanka/mschamps-23-web-app-test/issues"
+  },
+  "homepage": "https://github.com/MLSA-Sri-Lanka/mschamps-23-web-app-test#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
