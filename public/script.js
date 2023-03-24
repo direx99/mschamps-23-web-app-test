@@ -1,26 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const dateElement = document.getElementById("date");
-  const timeElement = document.getElementById("time");
-  const currentDate = new Date();
-  const formattedDate = currentDate.toLocaleDateString(undefined, {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+const form = document.querySelector("#my-form");
+const nameInput = document.querySelector("#name");
+const outputDiv = document.querySelector("#output");
 
-  dateElement.textContent = formattedDate;
+form.addEventListener("submit", (e) => {
+  const randomNumber = Math.floor(Math.random() * 10000);
+  e.preventDefault();
+  const name = nameInput.value;
+  outputDiv.innerHTML = `
+  Hello, ${name}! It's nice to meet you.<br />
+  Your random magic number is ${randomNumber}.<br />
+  Thanks for visiting our app.
+  `;
+});
 
-  function updateTime() {
-    const currentTime = new Date();
-    const formattedTime = currentTime.toLocaleTimeString(undefined, {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
-    timeElement.textContent = formattedTime;
-  }
+var navigateButton = document.getElementById("navigate");
 
-  updateTime();
-  setInterval(updateTime, 1000);
+navigateButton.addEventListener("click", function () {
+  window.location.href = "home.html";
 });
